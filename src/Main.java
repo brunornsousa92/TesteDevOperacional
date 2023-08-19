@@ -26,7 +26,7 @@ public class Main {
 		Produto produto7 = new Produto(7, "Suco Natural", 30, 10.0, empresa3);
 		Produto produto8 = new Produto(8, "Sonho", 5, 8.50, empresa);
 		Produto produto9 = new Produto(9, "Croissant", 7, 6.50, empresa);
-		Produto produto10 = new Produto(10, "Ché Gelado", 4, 5.50, empresa);
+		Produto produto10 = new Produto(10, "Chá Gelado", 4, 5.50, empresa); // Corrigindo a palavra Chá Gelado
 
 		Cliente cliente = new Cliente("07221134049", "Allan da Silva", "cliente", 20);
 		Cliente cliente2 = new Cliente("72840700050", "Samuel da Silva", "cliente2", 24);
@@ -202,6 +202,8 @@ public class Main {
 			System.out.println("Usuário não encontrado");
 		}
 	}
+
+	// Segundo meus testes as comissões não estão sendo aplicadas
 
 	public static Venda criarVenda(List<Produto> carrinho, Empresa empresa, Cliente cliente, List<Venda> vendas) {
 		Double total = carrinho.stream().mapToDouble(Produto::getPreco).sum();
